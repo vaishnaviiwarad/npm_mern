@@ -35,12 +35,10 @@ jobs:
       working-directory: ./frontend
 
     - name: Deploy to GitHub Pages
-      run: |
-           npm install -g gh-pages
-           npx gh-pages -d ./frontend/dist -b gh-pages
-      env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      uses: peaceiris/actions-gh-pages@v5.0.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./frontend/dist
 
 
 
