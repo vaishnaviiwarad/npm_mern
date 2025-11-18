@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon index.js",
-    "lint": "npx --no-install eslint ."
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
