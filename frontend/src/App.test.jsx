@@ -5,6 +5,6 @@ import App from './App.jsx';
 describe('App component', () => {
   it('renders heading', () => {
     render(<App />);
-    expect(screen.getByText("vaishnavi")).toBeInTheDocument();
+    expect(screen.getByText("aishnavi")).toBeInTheDocument();
   });
 });
