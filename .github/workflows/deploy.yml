@@ -34,16 +34,13 @@ jobs:
       run: npm run build
       working-directory: ./frontend
 
-    - name: Set Git identity
-      run: |
-        git config --global user.name "vaishnavi"
-        git config --global user.email "vaishnaviwarad21@gmail.com"
-
     - name: Deploy to GitHub Pages
-      run: npm run deploy
-      working-directory: ./frontend
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: peaceiris/actions-gh-pages@v6
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          user_name: "vaishnavi"
+          user_email: "vaishnaviwarad21@gmail.com"
 
 
 
