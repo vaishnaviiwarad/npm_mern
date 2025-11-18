@@ -24,21 +24,21 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        working-directory: ./npm_mern  # point to your frontend folder
+        working-directory: frontend  # point to your frontend folder
 
     - name: Install dependencies
       run: npm ci
-      working-directory: ./npm_mern
+      working-directory: frontend
 
     - name: Build project
       run: npm run build
-      working-directory: ./npm_mern
+      working-directory: frontend
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./npm_mern/dist
+        publish_dir: frontend/dist
 
 
 
