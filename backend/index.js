@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
-const b=1
-console.log(a)
+
 
 app.get("/", (req, res) => {
   res.send("Backend running successfully!");

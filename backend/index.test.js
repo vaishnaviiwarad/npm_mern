@@ -1,3 +1,4 @@
+/* eslint-env jest */
 const request =require('supertest') ;
 const express =require('express') ;
 
