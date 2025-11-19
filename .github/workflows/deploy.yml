@@ -37,6 +37,12 @@ jobs:
       run: npm run build
       working-directory: ./frontend
 
+    - name: Copy Docs Folder
+      run: |
+          mkdir -p frontend/dist/swagger-docs
+          cp -R backend/swagger/* frontend/dist/swagger-docs/
+
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
