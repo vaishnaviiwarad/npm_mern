@@ -22,4 +22,6 @@ jobs:
           destination_dir: swagger
           user_name: "vaishnavi"
           user_email: "vaishnaviwarad21@gmail.com"
-          
+          keep_files: true
+          allow_empty_commit: false
+          enable_jekyll: false
