@@ -5,25 +5,18 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write    # Required to push to gh-pages
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Deploy Swagger to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Or use PAT if gh-pages is protected
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./swagger
           publish_branch: gh-pages
-          destination_dir: swagger  # This will deploy to https://.../swagger/
+          destination_dir: swagger
           user_name: "vaishnavi"
-          user_email: "vaishnaviiwarad21@gmail.com"
-          allow_empty_commit: false
-          keep_files: true          # Keeps frontend files already in gh-pages
-          force_orphan: false
-          enable_jekyll: false
+          user_email: "vaishnaviwarad21@gmail.com"
