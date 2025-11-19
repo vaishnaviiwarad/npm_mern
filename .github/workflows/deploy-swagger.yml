@@ -17,7 +17,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./swagger
+          publish_dir: ./backend/swagger
           publish_branch: gh-pages
           destination_dir: swagger
           user_name: "vaishnavi"
